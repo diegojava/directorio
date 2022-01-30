@@ -12,6 +12,11 @@ export class NegocioComponent implements OnInit {
   lista: any = []
   id: any
 
+   // Configuración de Google Maps 
+   center = {lat: 18.3356806, lng: -99.5110333};
+   zoom = 20;
+   display?: google.maps.LatLngLiteral;
+
   constructor(
     private negService: NegocioService,
     private route: ActivatedRoute
@@ -29,7 +34,7 @@ export class NegocioComponent implements OnInit {
     this.negService.getNegocio(this.id).subscribe(
       res => {
         this.lista = res
-        console.log(this.lista.data);
+        console.log(this.lista);
       },
       error => console.log(error)
     )

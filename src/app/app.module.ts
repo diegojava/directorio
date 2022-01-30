@@ -9,6 +9,7 @@ import { AgregarComponent } from './componentes/agregar/agregar.component';
 import { EditarComponent } from './componentes/editar/editar.component';
 import { FormsModule } from '@angular/forms';
 import { NegocioComponent } from './componentes/negocio/negocio.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NegocioComponent } from './componentes/negocio/negocio.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
