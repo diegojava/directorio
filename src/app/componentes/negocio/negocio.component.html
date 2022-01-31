@@ -12,8 +12,8 @@
                             <!-- Post meta content-->
                             <!--<div class="text-muted fst-italic mb-2">Posted on January 1, 2021 by Start Bootstrap</div>-->
                             <!-- Post categories-->
-                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">{{ item.id_categoria }}</a>&nbsp;
-                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">{{ item.id_subcategoria }}</a>
+                            <a class="badge bg-secondary text-decoration-none link-light" [routerLink]="['/categoria/'+item.id_categoria]">{{ item.id_categoria }}</a>&nbsp;
+                            <a class="badge bg-secondary text-decoration-none link-light" [routerLink]="['/subcategoria/'+item.id_subcategoria]">{{ item.id_subcategoria }}</a>
                         </header>
                         <!-- Preview image figure-->
                         <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure>
@@ -22,11 +22,14 @@
                             <p class="fs-5 mb-4">{{ item.descripcion }}</p>
                         </section>
                         <!-- mapa -->
-                        <google-map width="750px"
+
+                        <iframe [src]="saniUrl" height="350px" width="100%"></iframe>
+
+                        <!--<google-map *ngIf="mapa" width="100%"
                             height="450px"
                             [center]=center
                             [zoom]=zoom>
-                        </google-map>
+                        </google-map>-->
                     </article>
                     <!-- Comments section-->
                     <section class="mb-5">
