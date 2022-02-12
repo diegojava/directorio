@@ -27,14 +27,17 @@ export class NegocioComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id']
     this.getNegocio(this.id)
+    this.getMap();
+  }
 
+  getMap() {
     setTimeout(() => {
       let lat = parseFloat(this.lista[0].latitud)
       let lng = parseFloat(this.lista[0].longitud)
       this.googleUrl = 'http://maps.google.com/maps?q=' + lat + ',' + lng + '&z=16&output=embed'
       console.log(this.googleUrl);
       this.saniUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.googleUrl)
-    }, 100);
+    }, 1000);
   }
 
   getNegocio(id: any) {
