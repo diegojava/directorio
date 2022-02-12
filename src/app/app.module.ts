@@ -10,6 +10,7 @@ import { EditarComponent } from './componentes/editar/editar.component';
 import { FormsModule } from '@angular/forms';
 import { NegocioComponent } from './componentes/negocio/negocio.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
